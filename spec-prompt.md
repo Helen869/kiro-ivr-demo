@@ -1,9 +1,4 @@
-# Kiro Spec prompt（复制粘贴进 Kiro 的 Spec 模式）
-
-<!-- 中文说明：下面这段英文直接粘贴给 Kiro。它会依次生成
-     .kiro/specs/ivr-as-code/requirements.md → design.md → tasks.md，
-     每一步都会停下来等你 approve —— 这正是 demo 里要展示的招牌流程。
-     英文给模型效果更好；steering 文件里已经有项目背景，不用重复写。 -->
+# Kiro Spec prompt - copy past to Kiro in Spec model
 
 Create a spec for converting our manually-maintained Amazon Connect IVR
 main-menu contact flow into Terraform-managed infrastructure.
