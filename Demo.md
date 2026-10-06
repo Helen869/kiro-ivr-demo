@@ -14,14 +14,22 @@ no rollback.
 
 Today I will show you how that manual work becomes a pull request."
 
-## 2. Steering files — conventions written once (1 min)
+## 2. Steering files — conventions written once (1.5 min)
 
 "First, look at `.kiro/steering/`. Three small files: product background,
 tech rules, and repo layout.
 
-Think of it as the team's shared rulebook. Kiro reads it automatically
-every time it works. We write our conventions once, and the agent follows
-them every time. No need to repeat them in every prompt."
+Why do we need this? Every time you start a new AI chat, the AI knows
+nothing about your project. You end up repeating yourself in every prompt:
+'Use this pattern, not that one.' Steering fixes that. Think of it as the
+team's shared rulebook. Kiro reads it automatically every time it works.
+We write our conventions once, and the agent follows them every time.
+
+How are these files made? Two ways. Kiro can analyze your codebase and
+auto-generate them. Or you write them by hand. Ours are hand-written,
+because business context — like our compliance rules — cannot be inferred
+from code. In practice, teams start with auto-generated docs and refine
+them by hand."
 
 ## 3. Spec mode — the core feature (3 min)
 
@@ -43,7 +51,7 @@ traceability matters."
 Then I run `terraform fmt` and `terraform validate`. Note: validate needs
 no AWS credentials, so this is safe to run live.
 
-Now I diff it against `terraform/`, our reference implementation. The
+Now I diff it against `terraform-reference/`, our reference implementation. The
 AI-generated code matches. The steering constraints actually worked."
 
 ## 5. Agent hook — automation on save (30 sec, optional)
@@ -64,7 +72,7 @@ back. Thank you."
 ## Backup plans (do NOT say these out loud)
 
 - If credits run out or live generation fails: present the reference
-  implementation under `terraform/` and continue from step 4. The audience
+  implementation under `terraform-reference/` and continue from step 4. The audience
   cannot tell the difference.
 - If there are no AWS credentials: stop after `terraform validate` and say
   plan needs read-only credentials, which we skip today.
