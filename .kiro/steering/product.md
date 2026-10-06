@@ -12,7 +12,7 @@ console. No version control, no code review, no rollback, and console edits drif
 from what the team thinks is deployed.
 
 Goal of this repo: contact flows as code. The flow JSON under `flows/` is the
-source of truth for IVR logic; Terraform under `terraform/` deploys it via the
+source of truth for IVR logic; Terraform under `terraform-reference/` deploys it via the
 `aws_connect_contact_flow` resource. Releases become pull requests, not console
 clicks.
 

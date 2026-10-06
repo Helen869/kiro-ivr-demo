@@ -1,4 +1,9 @@
-# Kiro Spec prompt - copy past to Kiro in Spec model
+# Kiro Spec prompt（复制粘贴进 Kiro 的 Spec 模式）
+
+<!-- 中文说明：下面这段英文直接粘贴给 Kiro。它会依次生成
+     .kiro/specs/ivr-as-code/requirements.md → design.md → tasks.md，
+     每一步都会停下来等你 approve —— 这正是 demo 里要展示的招牌流程。
+     英文给模型效果更好；steering 文件里已经有项目背景，不用重复写。 -->
 
 Create a spec for converting our manually-maintained Amazon Connect IVR
 main-menu contact flow into Terraform-managed infrastructure.
@@ -11,7 +16,7 @@ Context (also in .kiro/steering/):
 
 Requirements:
 1. Generate Terraform code under `terraform-live/` (scratch dir, do NOT touch
-   `terraform/`) that deploys `flows/main-menu.json` as an
+   `terraform-reference/`) that deploys `flows/main-menu.json` as an
    `aws_connect_contact_flow` resource, with `content` rendered via
    `templatefile()` so queue ARNs are injected as variables.
 2. Variables for: connect instance ID, flow name, billing queue ARN, general
