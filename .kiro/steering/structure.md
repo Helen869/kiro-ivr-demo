@@ -1,6 +1,6 @@
 ---
 inclusion: fileMatch
-fileMatchPattern: "flows/**,terraform-reference/**,.kiro/specs/**"
+fileMatchPattern: "flows/**,terraform-reference/**,terraform-live/**,.kiro/specs/**"
 ---
 
 # Repo structure
