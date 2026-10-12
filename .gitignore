@@ -1,0 +1,31 @@
+# Terraform working directories and state
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local Terraform variables (may contain credentials or account IDs)
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Generated demo workspace (keep terraform-reference/ tracked)
+/terraform-live/
+
+# Local environment and OS/editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep .terraform.lock.hcl tracked for reproducible provider versions
